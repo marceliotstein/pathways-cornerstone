@@ -1,0 +1,25 @@
+/*
+ * this Javascript is added via Edge Options - General. Here for developer reference only.
+ */
+
+const exps = [
+  "/wp-content/themes/educator-child/images/exp2front.jpg?x=reidjkafdwor",
+  "/wp-content/themes/educator-child/images/exp3front.jpg?x=reufdsfwio",
+  "/wp-content/themes/educator-child/images/exp4front.jpg?x=rewfdsfiro",
+  "/wp-content/themes/educator-child/images/exp1front.jpg?x=reiwfdsfore"
+]
+
+const node1 = document.getElementById("experience-cycle");
+const node2 = document.getElementById("experience-cycle2");
+
+const cycleImages = (images, container, step) => {
+    images.forEach((image, index) => (
+    setTimeout(() => {
+        container.style.backgroundImage = `url(${image})`  
+    }, step * (index + 1))
+  ))
+  setTimeout(() => cycleImages(images, container, step), step * images.length)
+}
+
+cycleImages(exps, node1, 3000);
+cycleImages(exps, node2, 3000);

@@ -1,0 +1,697 @@
+/*
+Theme Name: Educator Child
+Theme URI: http://educator.edge-themes.com
+Description: Custom child theme for Cornerstone Day School
+Author: Marc Eliot Stein
+Author URI: https://marceliotstein.com
+Version: 1.0.1
+Text Domain: educator
+Template: educator
+*/
+
+.cds-referrer-frame {
+  text-align: center;
+  background-color: white;
+  color: black;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #6a1242;
+  margin: 10px;
+  padding: 10px;
+}
+
+.cds-referrer-frame-logo {
+  padding: 5px;
+}
+
+@media (max-width: 400px) {
+  .cds-footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+ 
+  .edgt-vertical-align-containers .edgt-position-right {
+    padding-right: 40px;
+  }
+}
+
+.edgt-content .edgt-content-inner .edgt-container .edgt-container-inner {
+  padding-top: 0px !important;
+}
+
+.cds-no-pic-spacer {
+  margin-top: 30px;
+}
+
+.cds-hide {
+  display: none !important;
+}
+
+blockquote p:before {
+  content: "";
+  display: none;
+}
+
+.edgt-search-page-holder a {
+  font-size: 1.5rem;
+  color: #ba72a2;
+}
+
+.edgt-search-page-holder a:hover {
+  font-size: 1.5rem;
+  color: #eaa2c2;
+}
+  
+.edgt-search-page-holder .edgt-search-title {
+  display: none;
+}
+  
+.edgt-search-page-holder .edgt-search-page-form {
+  padding-top: 100px;
+}
+
+@media (min-width: 1024px) {
+  .edgt-search-page-holder .edgt-search-page-form {
+    padding-top: 80px;
+  }
+}
+
+table, table tbody tr, table thead tr, tbody, tr, td {
+  color: #000000;
+  padding: 0px;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #000000;
+}
+
+ul {
+  padding-left: 18px;
+  list-style-position: outside;
+}
+
+ul, li {
+  color: #000000;
+}
+
+
+.cds-picstrip img {
+  width: 100%;
+}
+
+.edgt-logo-wrapper {
+  padding-top: 3px !important;
+  padding-left: 2px !important;
+}
+
+.edgt-menu-area {
+  height: 80px !important;
+}
+
+.edgt-title-wrapper {
+  height: 70px !important;
+}
+
+.edgt-title-holder {
+  height: 100% !important;
+  padding-top: 0px !important;
+}
+
+blockquote:before {
+  color: #bbbcbe;
+}
+  
+@media (max-width: 500px) {
+  .cds-block-quote,
+  .cds-block-quote-full-width {
+    font-size: 22px;
+  }
+
+  .cds-block-quote p,
+  .cds-block-quote-full-width p {
+    font-size: 15px;
+  }
+}
+  
+@media (min-width: 1024px) {
+  .cds-block-quote,
+  .cds-block-quote-full-width {
+    padding-top: 0px; 
+  }
+
+  .cds-block-quote {
+    padding-left: 12%;
+    padding-right: 20px;
+    text-align: right;
+  }
+}
+
+@media (max-width: 480px) {
+  .edgt-grid {
+    width: 390px;
+  }
+}
+
+.widget.widget_search .input-holder {
+  border-color: #000000;
+}
+
+
+.edgt-grid-row .edgt-sidebar-holder.edgt-sidebar-left {
+  border-right: 0px;
+}
+
+@media (min-width: 1024px) {
+  .edgt-grid-row .edgt-sidebar-holder.edgt-sidebar-left {
+    border-right: 2px solid #6a1242;
+  }
+}
+
+.edgt-title-holder.edgt-standard-type .edgt-page-title {
+  text-align: center;
+}
+
+.cds-side-index {
+  padding-bottom: 30px;
+}
+
+.cds-side-title {
+  width: 100%;
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+  font-size: 1.8rem;
+  font-weight: 600;
+  background-color: #6a1242;
+  color: white;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+.cds-side-anchor,   
+.cds-side-anchor a {
+  color: black;  
+  font-family: "Tienne", serif;
+  font-weight: 500;
+}
+
+.edgt-page-title {
+  font-family: "Tienne", serif;
+  font-weight: 100;
+  font-size: 3.0em;
+  color: #6a1242;
+  background-color: #ffffff;
+  padding: 18px 0px 18px 0px;
+  letter-spacing: .06em;
+  line-height: 1.0em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 500px) {
+  .edgt-page-title {
+    font-size: 2.5em;
+  }
+}
+  
+@media (min-width: 1024px) {
+  .edgt-page-title {
+    font-size: 3.5em;
+  }
+}
+
+.cds-front-feature-table {
+  border: none;
+  margin-bottom: 30px;
+  margin: 0 auto;
+}
+
+.cds-front-feature-table tr {
+  border: none;
+}
+  
+.cds-td-half {
+  width: 48%;
+}
+
+.cds-td-spacer {
+  width: 4%;
+}
+
+.cds-tr-spacer {
+  height: 32px;
+}
+
+.cds-sidebar-feature {
+  background-color: #6a1242;
+  padding: 20px 12px 30px 12px;
+  color: #ffffff;
+  font-family: "Abril Fatface";
+  font-size: 2rem;
+  text-align: center;
+}
+
+.cds-sidebar-feature-small {
+  color: #ffffff;
+  font-family: "Tienne";
+  font-size: .8rem;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+@media (min-width: 700px) {
+  #experience-cycle {
+    width: 600px;
+  }
+}
+
+#experience-cycle,
+#experience-cycle2 {
+  background-image: url("/wp-content/themes/educator-child/images/exp1front.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#experience-cycle, 
+#experience-cycle2 {
+  display: table-cell;
+}
+
+.cds-front-feature-wide {
+  vertical-align: top;
+  font-size: 1.6rem;
+  color: #000000;
+}
+  
+.cds-front-feature-wide a,
+.cds-front-feature a {
+  color: white;
+}
+
+@media (min-width: 1024px) {
+  .menu-item {
+    text-align: left;
+    margin-right: 0px;
+    padding-right: 0px;
+  }
+}
+
+.cds-side-index {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .cds-side-index {
+    display: block;
+  }
+}
+
+.edgt-page-content-holder {
+  font-size: 1.1em;
+  padding-left: 10px; 
+  padding-right: 10px; 
+}
+
+@media (min-width: 1024px) {
+  .edgt-page-content-holder {
+    padding-left: 20px; 
+    padding-right: 20px; 
+  }
+}
+  
+.edgt-mobile-header .edgt-mobile-menu-opener a {
+  color: #6a1242;
+  font-size: 42px;
+}
+  
+.cds-narrowview {
+  display: block;
+}
+
+.cds-wideview {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .cds-narrowview {
+    display: none;
+  }
+
+  .cds-wideview {
+    display: block;
+  }
+}
+
+.cds-seal-narrow-wrapper {
+  text-align: center;
+} 
+
+.cds-seal-front {
+  margin: 0 auto;
+  width: 400px;
+  padding: 10px;
+}
+
+@media (min-width: 1024px) {
+  .cds-seal-front {
+    width: 250px;
+    padding: 5px 12px 0px 5px;
+  }
+}
+
+.cds-slogan-narrow {
+  text-align: center;
+  background-color: #6a1242;
+  color: white;
+  font-family: "EB Garamond";
+  font-size: 32px;
+  line-height: 1.1em;
+  padding: 20px 30px 20px 30px;
+  margin: 0px 0px 30px 0px;
+}
+
+@media (max-width: 500px) {
+  .cds-slogan-narrow {
+    font-size: 18px;
+    padding: 10px 15px 10px 15px;
+  }
+}
+
+/***********************/
+/* front page features */
+/***********************/
+
+.cds-front-feature-narrow {
+  margin: 15px auto 15px auto;
+  text-align: center;
+}
+
+.cds-exp-box-narrow,
+.cds-faq-box-narrow,
+.cds-pubs-box-narrow,
+.cds-tour-box-narrow {
+  width: 100%;
+  height: auto;
+}
+
+.cds-exp-box-wide img,
+.cds-tour-box-wide img,
+.cds-faq-box-wide img,
+.cds-pubs-box-wide img {
+  width: 100%;
+  height: auto;
+}
+
+/***********/
+/* top bar */
+/***********/
+
+.edgt-top-bar {
+  font-size: 20px;
+}
+
+.edgt-top-bar .edgt-position-right {
+  padding-top: 7px;
+}
+
+.edgt-top-bar .edgt-vertical-align-containers .edgt-position-left {
+  display: none;
+}
+
+.edgt-top-bar .edgt-vertical-align-containers .edgt-position-right {
+  float: none;
+  text-align: center;
+}
+
+.cds-parent-quote {
+  padding-top: 16px;
+  padding-bottom: 0px;
+  line-height: 22px;
+}
+
+.edgt-page-footer {
+  margin-top: 40px;
+}
+
+.cds-parent-quote {
+  font-family: "Roboto Condensed";
+  color: black;
+}
+
+.cds-sidebar-virtual-tour,
+.cds-sidebar-parents-faq,
+.cds-sidebar-pubs {
+  text-align: center;
+}
+
+.cds-sidebar-pubs {
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+.cds-sidebar-experience img {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.cds-sidebar-virtual-tour img {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.cds-sidebar-parents-faq img {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.edgt-top-bar .edgt-grid .edgt-vertical-align-containers, .edgt-top-bar-in-grid-padding .edgt-top-bar .edgt-grid .edgt-vertical-align-containers {
+  padding: 0px 0px 0px 0px;
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -170px;
+  visibility: hidden;
+}
+
+h2 {
+  font-family: "Tienne";
+  font-size: 1.8rem;
+  font-style: normal;
+  color: #6a1242;
+  line-height: 1.4em;
+}
+
+h3 {
+  font-family: "Tienne";
+  font-size: 1.4rem;
+  font-style: normal;
+  color: #6a1242;
+}
+
+h4 {
+  font-family: "Tienne";
+  font-style: normal;
+  color: #6a1242;
+}
+
+@media (max-width: 500px) {
+  h2 {
+   font-size: 1.3rem;
+  }
+ 
+  h3 {
+   font-size: 1.15rem;
+  }
+}
+
+.cds-district-box {
+  color: black;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #6a1242;
+}
+
+.cds-district-td-narrow {
+  text-align: left;
+  vertical-align: top;
+  width: 100%;
+  padding: 5px;
+}
+
+.cds-district-td-wide {
+  text-align: left;
+  vertical-align: top;
+  width: 33.3%;
+  padding: 5px;
+}
+
+.cds-pubs-subtitle {
+  color: black;
+  text-align: center;
+}
+
+.cds-pubs-top-spacer {
+  height: 40px;
+}
+
+.cds-publications-page h2 {
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .cds-pubs-subtitle {
+    text-align: left;
+  }
+
+  .cds-publications-page h2 {
+    text-align: left;
+  }
+}
+
+.cds-pdf-thumb {
+  width: 100%;
+  text-align: center;
+}
+
+.cds-pdf-thumb img {
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+}
+
+cds-pdf-thumb p {
+  margin-top: 3px;
+}
+
+@media (min-width: 1024px) {
+  .cds-pdf-thumb {
+    text-align: center;
+    width: 230px;
+    float: left;
+  }
+
+  .cds-clear {
+    clear: both;
+  }
+}
+
+@media (min-width: 1200px) {
+  .edgt-title-wrapper .edgt-grid {
+    max-width: 800px;
+  }
+}
+
+.edgt-title-wrapper .edgt-grid {
+  max-width: default;
+}
+
+table, table tbody tr, table thead tr, tbody, tr, td {
+  border-width: 0px;
+}
+
+table td.cds-exp-td-left {
+  padding-left: 2px;
+  padding-right: 11px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+table td.cds-exp-td-right {
+  padding-left: 11px;
+  padding-right: 2px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.edgt-position-right-inner {
+  color: #ffffff;
+}
+
+.edgt-page-header .edgt-vertical-align-containers {
+  padding: 0px 0px 0px 0px; 
+}
+
+.page .edgt-content {
+  margin-top: -30px !important;
+}
+
+@media (min-width: 1024px) {
+  .edgt-content {
+    padding-top: 15px;
+  }
+
+  .home .edgt-content {
+    padding-top: 0px;
+    margin-top: -116px !important;
+  }
+
+  .home .edgt-slider {
+    margin-top: 116px;
+  }
+
+  .edgt-page-header .edgt-fixed-wrapper.fixed {
+    background-color: #ffffff;
+  }
+}
+
+.cds-footer-img {
+  width: 100px;
+}
+
+.cds-footer-table {
+  width: 100%;
+}
+
+.cds-footer-td-side {
+  color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.cds-footer-td-center {
+  color: #ffffff;
+  width: 70%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.cds-footer-title {
+  font-family: "Abril Fatface", serif;
+  font-size: 2em;
+  color: white;
+  padding-bottom: 12px;
+}
+
+.cds-footer {
+  background-image: url("/wp-content/themes/educator-child/images/cds-burgundysquare.jpg");
+  background-repeat: repeat;
+  color: white;
+  text-align: center;
+} 
+
+.cds-footer p {
+  color: white;
+  text-align: center;
+}
+
+.edgt-full-width { 
+  padding: 0px 15px 0px 15px;
+}
+
+@media (min-width: 1024px) {
+  .cds-footer-title {
+    font-size: 2.5em;
+   }
+
+  .edgt-full-width { 
+    padding: 0px 100px 0px 100px;
+  }
+}
