@@ -21,11 +21,21 @@
      */
     do_action('educator_edge_header_meta');
 
+    // activate referrer frame for this site?
+    $activate_referrer_frame = FALSE;
+
     // determine current page
     global $wp;
+    $site_is_pathways = FALSE;
+    $site_is_cornerstone = FALSE;
     $current_url = home_url(add_query_arg(array(), $wp->request));
     $current_path = str_replace("https://pathways-cornerstonedayschool.com/","",$current_url);
     $current_path = str_replace("https://pathways-cornerstonedayschool.com","",$current_path);
+    if ($current_path!=$current_url) {
+      $site_is_pathways = TRUE;
+    } else {
+      $site_is_cornerstone = TRUE;
+    }
     $current_path = str_replace("https://cornerstonedayschool.com/","",$current_path);
     $current_path = str_replace("https://cornerstonedayschool.com","",$current_path);
 
@@ -36,60 +46,81 @@
     $header_img_wide = "/wp-content/themes/educator-child/images/blank1350.jpg";
     $spacer_class = "";
 
-    if ($current_path=="") { 
-      $current_page = "HOME";
-    } else if ($current_path=="therapeutic-services") { 
-      $current_page = "THERAPEUTIC";
-      $include_picstrip = "YES";
-      $header_img_narrow = "/wp-content/themes/educator-child/images/therapeutic1200.jpg";
-      $header_img_wide = "/wp-content/themes/educator-child/images/therapeutic1350.jpg";
-    } else if ($current_path=="academics") { 
-      $current_page = "ACADEMICS";
-      $include_picstrip = "YES";
-      $header_img_narrow = "/wp-content/themes/educator-child/images/academics1200.jpg";
-      $header_img_wide = "/wp-content/themes/educator-child/images/academics1350.jpg";
-    } else if ($current_path=="school-avoidance") { 
-      $current_page = "AVOIDANCE";
-      $include_picstrip = "YES";
-      $header_img_narrow = "/wp-content/themes/educator-child/images/school-avoidance1200.jpg";
-      $header_img_wide = "/wp-content/themes/educator-child/images/school-avoidance1350.jpg";
-    } else if ($current_path=="transitions") { 
-      $current_page = "TRANSITIONS";
-      $include_picstrip = "YES";
-      $header_img_narrow = "/wp-content/themes/educator-child/images/transitions1200.jpg";
-      $header_img_wide = "/wp-content/themes/educator-child/images/transitions1350.jpg";
-    } else if ($current_path=="admissions") { 
-      $current_page = "ADMISSIONS";
-      $include_picstrip = "YES";
-      $header_img_narrow = "/wp-content/themes/educator-child/images/admissions1200.jpg";
-      $header_img_wide = "/wp-content/themes/educator-child/images/admissions1350.jpg";
-    } else if ($current_path=="parents-faq") { 
-      $current_page = "FAQ";
-      $include_picstrip = "YES";
-      $header_img_narrow = "/wp-content/themes/educator-child/images/parentsfaq1200.jpg";
-      $header_img_wide = "/wp-content/themes/educator-child/images/parentsfaq1350.jpg";
-    } else if ($current_path=="getting-started") { 
-      $current_page = "STARTED";
-      $include_picstrip = "YES";
-      $header_img_narrow = "/wp-content/themes/educator-child/images/gettingstarted1200.jpg";
-      $header_img_wide = "/wp-content/themes/educator-child/images/gettingstarted1350.jpg";
-    } else if ($current_path=="getting-connected") { 
-      $current_page = "CONNECTED";
-      $include_picstrip = "YES";
-      $header_img_narrow = "/wp-content/themes/educator-child/images/gettingconnected1200.jpg";
-      $header_img_wide = "/wp-content/themes/educator-child/images/gettingconnected1350.jpg";
-    } else if ($current_path=="cornerstone-experience") { 
-      $current_page = "EXPERIENCE";
-      $include_slider = "experience700-slider";
-    } else if ($current_path=="virtual-tour") { 
-      $current_page = "VIRTUALTOUR";
-      $include_slider = "virtualtour";
-    } else if ($current_path=="who-we-are") {
-      $current_page = "WHO";
-      $spacer_class = "cds-no-pic-spacer";
-    } else if ($current_path=="publications") {
-      $current_page = "PUBLICATIONS";
-      $spacer_class = "cds-no-pic-spacer";
+    if ($site_is_pathways) {
+      if ($current_path=="") { 
+        $current_page = "HOME";
+      } else if ($current_path=="therapeutics") { 
+        $current_page = "THERAPEUTIC";
+        $include_picstrip = "YES";
+        $header_img_narrow = "/wp-content/themes/educator-child/images/pw-therapeutics1200.jpg";
+        $header_img_wide = "/wp-content/themes/educator-child/images/pw-therapeutics1350.jpg";
+      } else if ($current_path=="academics") { 
+        $current_page = "ACADEMICS";
+        $include_picstrip = "YES";
+        $header_img_narrow = "/wp-content/themes/educator-child/images/pw-academics1200.jpg";
+        $header_img_wide = "/wp-content/themes/educator-child/images/pw-academics1350.jpg";
+      } else if ($current_path=="transitions") { 
+        $current_page = "TRANSITIONS";
+        $include_picstrip = "YES";
+        $header_img_narrow = "/wp-content/themes/educator-child/images/pw-transitions1200.jpg";
+        $header_img_wide = "/wp-content/themes/educator-child/images/pw-transitions1350.jpg";
+      } else if ($current_path=="getting-started") { 
+        $current_page = "STARTED";
+        $include_picstrip = "YES";
+        $header_img_narrow = "/wp-content/themes/educator-child/images/pw-gettingstarted1200.jpg";
+        $header_img_wide = "/wp-content/themes/educator-child/images/pw-gettingstarted1350.jpg";
+      } else if ($current_path=="getting-connected") { 
+        $current_page = "CONNECTED";
+        $include_picstrip = "YES";
+        $header_img_narrow = "/wp-content/themes/educator-child/images/pw-gettingconnected1200.jpg";
+        $header_img_wide = "/wp-content/themes/educator-child/images/pw-gettingconnected1350.jpg";
+      }
+    } else { // site is cornerstone
+      if ($current_path=="") { 
+        $current_page = "HOME";
+      } else if ($current_path=="therapeutic-services") { 
+        $current_page = "THERAPEUTIC";
+        $include_picstrip = "YES";
+        $header_img_narrow = "/wp-content/themes/educator-child/images/therapeutic1200.jpg";
+        $header_img_wide = "/wp-content/themes/educator-child/images/therapeutic1350.jpg";
+      } else if ($current_path=="academics") { 
+        $current_page = "ACADEMICS";
+        $include_picstrip = "YES";
+        $header_img_narrow = "/wp-content/themes/educator-child/images/academics1200.jpg";
+        $header_img_wide = "/wp-content/themes/educator-child/images/academics1350.jpg";
+      } else if ($current_path=="school-avoidance") { 
+        $current_page = "AVOIDANCE";
+        $include_picstrip = "YES";
+        $header_img_narrow = "/wp-content/themes/educator-child/images/school-avoidance1200.jpg";
+        $header_img_wide = "/wp-content/themes/educator-child/images/school-avoidance1350.jpg";
+      } else if ($current_path=="transitions") { 
+        $current_page = "TRANSITIONS";
+        $include_picstrip = "YES";
+        $header_img_narrow = "/wp-content/themes/educator-child/images/transitions1200.jpg";
+        $header_img_wide = "/wp-content/themes/educator-child/images/transitions1350.jpg";
+      } else if ($current_path=="admissions") { 
+        $current_page = "ADMISSIONS";
+        $include_picstrip = "YES";
+        $header_img_narrow = "/wp-content/themes/educator-child/images/admissions1200.jpg";
+        $header_img_wide = "/wp-content/themes/educator-child/images/admissions1350.jpg";
+      } else if ($current_path=="parents-faq") { 
+        $current_page = "FAQ";
+        $include_picstrip = "YES";
+        $header_img_narrow = "/wp-content/themes/educator-child/images/parentsfaq1200.jpg";
+        $header_img_wide = "/wp-content/themes/educator-child/images/parentsfaq1350.jpg";
+      } else if ($current_path=="cornerstone-experience") { 
+        $current_page = "EXPERIENCE";
+        $include_slider = "experience700-slider";
+      } else if ($current_path=="virtual-tour") { 
+        $current_page = "VIRTUALTOUR";
+        $include_slider = "virtualtour";
+      } else if ($current_path=="who-we-are") {
+        $current_page = "WHO";
+        $spacer_class = "cds-no-pic-spacer";
+      } else if ($current_path=="publications") {
+        $current_page = "PUBLICATIONS";
+        $spacer_class = "cds-no-pic-spacer";
+      }
     }
 
     wp_head(); 
@@ -114,15 +145,17 @@
     <link rel="stylesheet" id="educator-edge-child-style-css" href="/wp-content/themes/educator-child/style.css?ver=RUERUEIKDSJFKDLCCBSBSJDLS" type="text/css" media="all">
 </head>
 <body <?php body_class();?> itemscope itemtype="http://schema.org/WebPage">
-    <?php if (FALSE and referrer_is_pathways()) { ?>
-      <div class="cds-referrer-frame">
-        <a href="https://pathways-cornerstonedayschool.com"><img class="cds-referrer-frame-logo" src="/wp-content/themes/educator-child/images/return-to-pathways760.png" /></a>
-      </div>
-    <?php } ?>
-    <?php if (referrer_is_cornerstone()) { ?>
-      <div class="cds-referrer-frame">
-        <a href="https://cornerstonedayschool.com"><img class="cds-referrer-frame-logo" src="/wp-content/themes/educator-child/images/return-to-cornerstone760.png" /></a>
-      </div>
+    <?php if ($activate_referrer_frame) { ?>
+      <?php if (FALSE and referrer_is_pathways()) { ?>
+        <div class="cds-referrer-frame">
+          <a href="https://pathways-cornerstonedayschool.com"><img class="cds-referrer-frame-logo" src="/wp-content/themes/educator-child/images/return-to-pathways760.png" /></a>
+        </div>
+      <?php } ?>
+      <?php if (referrer_is_cornerstone()) { ?>
+        <div class="cds-referrer-frame">
+          <a href="https://cornerstonedayschool.com"><img class="cds-referrer-frame-logo" src="/wp-content/themes/educator-child/images/return-to-cornerstone760.png" /></a>
+        </div>
+      <?php } ?>
     <?php } ?>
     <?php
     /**
