@@ -115,11 +115,19 @@
     }
   ?>
 
-  <div class="cds-sidebar-experience">
-    <a href="/cornerstone-experience"><div id="experience-cycle2"><img src="/wp-content/themes/educator-child/images/transparent600x400.gif" /></a>
-  </div>
+  <?php if ($site_is_pathways) { ?>
+    <div class="cds-sidebar-experience">
+      <a href="https://cornerstonedayschool.com"><img src="/wp-content/uploads/2019/12/pathways-cds-promo.jpg" /></a>
+    </div>
 
-  <?php if ($site_is_cornerstone) { ?>
+    <div class="cds-sidebar-experience">
+      <a href="https://cornerstonedayschool.com/virtual-tour"><img src="/wp-content/uploads/2019/12/pathways-virtualtour-promo.jpg" /></a>
+    </div>
+
+  <?php } else if ($site_is_cornerstone) { ?>
+    <div class="cds-sidebar-experience">
+      <a href="/cornerstone-experience"><div id="experience-cycle2"><img src="/wp-content/themes/educator-child/images/transparent600x400.gif" /></div></a>
+    </div>
     <div class="cds-sidebar-virtual-tour">
       <a href="/virtual-tour"><img src="/wp-content/uploads/2019/09/cds-virtualtour-promo.jpg" /></a>
     </div>

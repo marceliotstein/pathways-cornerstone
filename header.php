@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
+    <!-- january 2020 pathways/cornerstone -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <!--
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137522237-1"></script>
@@ -22,7 +23,7 @@
     do_action('educator_edge_header_meta');
 
     // activate referrer frame for this site?
-    $activate_referrer_frame = FALSE;
+    $activate_referrer_frame = TRUE;
 
     // determine current page
     global $wp;
@@ -146,15 +147,17 @@
 </head>
 <body <?php body_class();?> itemscope itemtype="http://schema.org/WebPage">
     <?php if ($activate_referrer_frame) { ?>
-      <?php if (FALSE and referrer_is_pathways()) { ?>
+      <!-- REFERRER FRAME ACTIVE -->
+      <?php if (referrer_is_pathways()) { ?>
         <div class="cds-referrer-frame">
           <a href="https://pathways-cornerstonedayschool.com"><img class="cds-referrer-frame-logo" src="/wp-content/themes/educator-child/images/return-to-pathways760.png" /></a>
         </div>
-      <?php } ?>
-      <?php if (referrer_is_cornerstone()) { ?>
+      <?php } else if (referrer_is_cornerstone()) { ?>
         <div class="cds-referrer-frame">
           <a href="https://cornerstonedayschool.com"><img class="cds-referrer-frame-logo" src="/wp-content/themes/educator-child/images/return-to-cornerstone760.png" /></a>
         </div>
+      <?php } else { ?>
+        <!-- NO REFERRER FRAME -->
       <?php } ?>
     <?php } ?>
     <?php

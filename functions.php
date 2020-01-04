@@ -30,6 +30,9 @@ function referrer_is_pathways() {
   } else {
      // is this a pathways referrer?
     $ref = $_SERVER['HTTP_REFERER'];
+    ?>
+    <!-- REFERRER IS <?php echo $ref ?> -->
+    <?
     $dev_cds_url = 'http://pathways.marceliotstein.net';
     $prod_cds_url = 'https://pathways-cornerstonedayschool.com';
     if ((strpos($ref,$dev_cds_url)!==FALSE) ||
