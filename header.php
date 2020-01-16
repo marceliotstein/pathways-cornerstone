@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-    <!-- january 2020 pathways/cornerstone -->
+    <!-- INCLUDE ONLY ONE OF THE FOLLOWING GA TAGS -->
+    <!-- BEGIN cornerstone GA tag -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <!--
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137522237-1"></script>
@@ -13,6 +14,18 @@
       gtag('config', 'UA-137522237-1');
     </script>
     -->
+    <!-- END cornerstone GA tag -->
+    <!-- BEGIN pathways GA tag -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155631852-1"></script>
+    <script>
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+
+       gtag('config', 'UA-155631852-1');
+    </script>
+    <!-- END pathways GA tag -->
     <?php
     /**
      * educator_edge_header_meta hook
@@ -23,7 +36,8 @@
     do_action('educator_edge_header_meta');
 
     // activate referrer frame for this site?
-    $activate_referrer_frame = TRUE;
+    // January 2020 - we are no longer using referrer frame
+    $activate_referrer_frame = FALSE;
 
     // determine current page
     global $wp;
@@ -148,11 +162,11 @@
 <body <?php body_class();?> itemscope itemtype="http://schema.org/WebPage">
     <?php if ($activate_referrer_frame) { ?>
       <!-- REFERRER FRAME ACTIVE -->
-      <?php if (referrer_is_pathways()) { ?>
+      <?php if ($site_is_cornerstone && referrer_is_pathways()) { ?>
         <div class="cds-referrer-frame">
           <a href="https://pathways-cornerstonedayschool.com"><img class="cds-referrer-frame-logo" src="/wp-content/themes/educator-child/images/return-to-pathways760.png" /></a>
         </div>
-      <?php } else if (referrer_is_cornerstone()) { ?>
+      <?php } else if ($site_is_pathways && referrer_is_cornerstone()) { ?>
         <div class="cds-referrer-frame">
           <a href="https://cornerstonedayschool.com"><img class="cds-referrer-frame-logo" src="/wp-content/themes/educator-child/images/return-to-cornerstone760.png" /></a>
         </div>

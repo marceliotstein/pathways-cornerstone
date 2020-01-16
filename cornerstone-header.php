@@ -4,7 +4,6 @@
     <!-- INCLUDE ONLY ONE OF THE FOLLOWING GA TAGS -->
     <!-- BEGIN cornerstone GA tag -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <!--
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137522237-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -13,10 +12,10 @@
 
       gtag('config', 'UA-137522237-1');
     </script>
-    -->
     <!-- END cornerstone GA tag -->
     <!-- BEGIN pathways GA tag -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!--
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155631852-1"></script>
     <script>
        window.dataLayer = window.dataLayer || [];
@@ -25,6 +24,7 @@
 
        gtag('config', 'UA-155631852-1');
     </script>
+    -->
     <!-- END pathways GA tag -->
     <?php
     /**

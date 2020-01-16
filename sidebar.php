@@ -88,6 +88,7 @@
           <div class="cds-side-title">Who We Are</div>
           <div class="cds-side-anchor">&#9679;&nbsp; <a href="#school-leadership">School Leadership</a></div>
           <div class="cds-side-anchor">&#9679;&nbsp; <a href="#letter-from-our-staff">Letter From Our Staff</a></div>
+          <div class="cds-side-anchor">&#9679;&nbsp; <a href="#publications">Publications</a></div>
         </div>
         <?php
       } else if ($current_page=="FAQ") {
@@ -128,16 +129,17 @@
     <div class="cds-sidebar-experience">
       <a href="/cornerstone-experience"><div id="experience-cycle2"><img src="/wp-content/themes/educator-child/images/transparent600x400.gif" /></div></a>
     </div>
+
     <div class="cds-sidebar-virtual-tour">
       <a href="/virtual-tour"><img src="/wp-content/uploads/2019/09/cds-virtualtour-promo.jpg" /></a>
     </div>
 
-    <div class="cds-sidebar-parents-faq">
-      <a href="/parents-faq"><img src="/wp-content/themes/educator-child/images/cds-parents-faq.jpg" /></a>
+    <div class="cds-sidebar-pubs">
+      <a target="_blank" href="https://pathways-cornerstonedayschool.com"><img alt="Learn about our unique solution to school avoidance" src="/wp-content/uploads/2020/01/pathways-feature-box-1.png" /></a>
     </div>
 
-    <div class="cds-sidebar-pubs">
-      <a href="/publications"><img src="/wp-content/themes/educator-child/images/cds-pubs-vertical.jpg" /></a>
+    <div class="cds-sidebar-parents-faq">
+      <a href="/parents-faq"><img src="/wp-content/themes/educator-child/images/cds-parents-faq.jpg" /></a>
     </div>
 
     <div class="cds-parent-quotes">
